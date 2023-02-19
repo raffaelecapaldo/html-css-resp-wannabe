@@ -111,6 +111,7 @@ img {
 .why-us {
     margin-bottom: 3rem;
 }
+
 .why-us .col-left {
     width: 40%;
 }
@@ -127,50 +128,59 @@ img {
 /************************************************
     SOLUZIONE RESPONSIVE
  ************************************************/
- @media screen and (max-width:768px)
 
- {
+
+@media screen and (max-width:768px) {
     .container {
-        width: 748px;
+        width: 748px; /* USELESS BECAUSE OF THE BONUS */
     }
- }
 
- @media screen and (max-width:480px) {
+    /* RESIZING OF THE LEFT IMAGE TO MAKE THE TWO IMAGES OF DIFFERENT SIZES SIMILAR WHEN SCALING DOWN */
+    .lessons .col:first-child img {
+        width: 84%;
+    }
+}
+
+
+@media screen and (max-width:480px) {
     .container {
         width: 460px;
         width: 80%;
-        margin:0 auto;
+        margin: 0 auto;
     }
 
     .lessons .col:first-child {
-        margin-bottom:4rem;
+        margin-bottom: 4rem;
     }
 
     .row {
         flex-wrap: wrap;
     }
 
-    .text:first-of-type {
-        margin-bottom:20px;
-    } 
+    .text {
+        margin-bottom: 20px;
+    }
 
-    .lessons .col, .steps .col, .why-us .col-left, .why-us .col-right{
+    .lessons .col,
+    .steps .col,
+    .why-us .col-left,
+    .why-us .col-right {
         width: 100%;
     }
 
     .why-us .col-left {
-        margin-bottom:4rem;
+        margin-bottom: 4rem;
     }
 
     .why-us {
-        background-color:#222222;
-        padding-top:3rem;
-        margin-bottom:0;
-        padding-bottom:3rem;
+        background-color: #222222;
+        padding-top: 3rem;
+        margin-bottom: 0;
+        padding-bottom: 3rem;
     }
 
     .steps {
-        margin:0;
+        margin: 0;
     }
 
 }
